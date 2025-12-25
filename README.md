@@ -90,7 +90,7 @@ Inference (Run the App)
 
 To launch the real-time detector:
 ```bash
-python main.py
+python app.py
 ```
 
 ## 🎮 Controls
@@ -129,5 +129,6 @@ Moaz Hany
 **Dockerization**: Containerizing the application for easier deployment.
 
 **Cloud Deployment**: Hosting the inference model on AWS/GCP.
+
 
 **User Preferences**: Adding functionality to learn user music taste over time.
