@@ -97,11 +97,11 @@
     <script>
         let currentLang = 'mix';
         let currentTherapy = 'match';
-        let isCameraRunning = false; // متغير لحفظ حالة الكاميرا
+        let isCameraRunning = false; 
 
         const videoFeed = document.getElementById('video-feed');
         const cameraOverlay = document.getElementById('camera-overlay');
-        const btnToggle = document.getElementById('btn-toggle'); // الزرار الموحد
+        const btnToggle = document.getElementById('btn-toggle'); 
         const btnSnap = document.getElementById('btn-snap'); 
         const statusDiv = document.getElementById('status');
         const btnGenerate = document.getElementById('btn-generate');
@@ -109,7 +109,6 @@
         const snapImage = document.getElementById('snapImage');
         const downloadLink = document.getElementById('downloadLink');
 
-        // دالة التبديل (Toggle)
         function toggleCamera() {
             if (!isCameraRunning) {
                 startCamera();
@@ -125,11 +124,9 @@
             cameraOverlay.style.opacity = '0'; 
             setTimeout(() => { cameraOverlay.style.display = 'none'; }, 500); 
             
-            // تغيير شكل الزرار لـ STOP
             btnToggle.innerHTML = '<i class="fas fa-stop"></i> Stop';
-            btnToggle.classList.add('running'); // كلاس عشان نغير اللون للأحمر
+            btnToggle.classList.add('running'); 
             
-            // نخفي السناب شوت لو بدأنا جلسة جديدة
             btnSnap.style.display = 'none';
 
             statusDiv.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Initializing AI Engine...';
@@ -151,11 +148,9 @@
             cameraOverlay.style.display = 'flex';
             setTimeout(() => { cameraOverlay.style.opacity = '1'; }, 10); 
             
-            // إرجاع شكل الزرار لـ START
             btnToggle.innerHTML = '<i class="fas fa-play"></i> Start Experience';
             btnToggle.classList.remove('running');
             
-            // نخفي السناب شوت لما نقفل الكاميرا
             btnSnap.style.display = 'none';
             
             statusDiv.innerText = "Camera paused.";
@@ -212,7 +207,6 @@
                     statusDiv.innerText = `Mood Detected: ${data.mood}`;
                     statusDiv.style.color = "#00ffcc";
                     
-                    // ✅ هنا بس بيظهر زرار السناب شوت
                     btnSnap.style.display = 'flex';
                     btnSnap.style.animation = "pulseGlow 1s infinite"; 
                     setTimeout(() => { btnSnap.style.animation = "none"; }, 3000);
