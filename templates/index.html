@@ -128,20 +128,16 @@
 
     <script>
         function showSection(sectionId) {
-            // 1. إخفاء كل السكاشن
             document.querySelectorAll('.section').forEach(sec => {
                 sec.classList.remove('active');
             });
 
-            // 2. إظهار السكشن المطلوب
             document.getElementById(sectionId).classList.add('active');
 
-            // 3. تحديث النافبار (الخط اللي تحت الكلمة)
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active-link');
             });
             
-            // تفعيل اللينك المضغوط عليه
             document.getElementById('link-' + sectionId).classList.add('active-link');
         }
     </script>
