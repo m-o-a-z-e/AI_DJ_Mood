@@ -8,8 +8,7 @@
 
 > **Turn your vibe into a playlist.** AI Mood DJ is a full-stack web application that scans your facial expressions in real-time and curates the perfect Spotify playlist to match (or fix) your mood using Deep Learning.
 
-![Project Banner](path/to/your/snapshot_image.jpg) 
-*(Place one of your generated snapshots here)*
+![Project Banner](https://github.com/m-o-a-z-e/AI_Mood_DJ/blob/main/Screenshot%202026-01-03%20054702.png?raw=true)
 
 ## 📌 Table of Contents
 - [Project Overview](#-project-overview)
